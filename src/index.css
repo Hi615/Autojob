@@ -1,0 +1,226 @@
+:root {
+  --primary: #ff4d6d;
+  --primary-hover: #ff758f;
+  --secondary: #c9184a;
+  --accent: #ffb3c1;
+  --bg-soft: #fff5f5;
+  --text-main: #2b2d42;
+  --text-muted: #8d99ae;
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --shadow: 0 8px 32px 0 rgba(255, 77, 109, 0.15);
+}
+  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background: radial-gradient(circle at top left, #d1e0978e 0%, #d2e256 100%);
+  color: var(--text-main);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.floating-header {
+  backdrop-filter: blur(10px);
+  background: var(--glass-bg);
+  border-bottom: 1px solid var(--glass-border);
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 10px rgba(255, 77, 109, 0.3));
+}
+
+.logo-text {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--secondary);
+}
+
+.logo-text .heart {
+  color: var(--primary);
+}
+
+.container {
+  max-width: 900px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  flex: 1;
+  text-align: center;
+}
+
+.container h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, var(--secondary), var(--primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  margin-bottom: 3rem;
+}
+
+.editor-wrapper {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.editor-wrapper:focus-within {
+  transform: translateY(-5px);
+}
+
+.text-area {
+  width: 100%;
+  min-height: 250px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1.15rem;
+  font-family: 'Outfit', sans-serif;
+  color: var(--text-main);
+  resize: none;
+  line-height: 1.8;
+}
+
+.suggestions-container {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+  min-height: 40px;
+  align-items: center;
+}
+
+.suggestion-chip {
+  background: white;
+  border: 1px solid var(--accent);
+  color: var(--secondary);
+  padding: 8px 16px;
+  border-radius: 100px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 2px 8px rgba(255, 77, 109, 0.1);
+}
+
+.suggestion-chip:hover {
+  background: var(--primary);
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(255, 77, 109, 0.2);
+}
+
+.status-bar {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.status-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background: #ccd5ae;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.status-dot.active {
+  background: #4ade80;
+  box-shadow: 0 0 10px rgba(74, 222, 128, 0.5);
+}
+
+.loader {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--accent);
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.minimal-footer {
+  padding: 3rem 2rem;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+
+
+.designer-name {
+  color: #000000;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .container h1 {
+    font-size: 2.5rem;
+  }
+  .container {
+    margin: 2rem auto;
+  }
+}
