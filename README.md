@@ -20,44 +20,14 @@ Built by Himanshu Rout
 
 ---
 
-## 🛠️ Technology Stack
 
--   **Frontend**: [React 19](https://react.dev/) + [Vite](https://vitejs.dev/)
--   **AI Engine**: [Pyodide](https://pyodide.org/) (Python in WebAssembly)
--   **Styling**: Vanilla CSS with Modern Design Tokens
--   **Deployment**: Optimized for [Netlify](https://www.netlify.com/)
 
----
 
 ## 🚀 Getting Started
 
-### Prerequisites
 
--   [Node.js](https://nodejs.org/) (v18 or higher)
--   [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
-### Installation
 
-1.  **Clone the repository**:
-    ```bash
-    git clone https://github.com/your-username/autojob.git
-    cd autojob
-    ```
-
-2.  **Install dependencies**:
-    ```bash
-    npm install
-    ```
-
-3.  **Run the development server**:
-    ```bash
-    npm run dev
-    ```
-
-4.  **Open your browser**:
-    Navigate to `http://localhost:5173` to start writing with elegance.
-
----
 
 ## 🎨 Design Philosophy
 
